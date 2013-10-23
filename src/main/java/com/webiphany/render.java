@@ -6,7 +6,7 @@ class Render {
     public static void main( String[] args ) {
 	AsciiDocProcessor asciidoc = new AsciiDocProcessor();
 	String markup = readFile( args[ 0 ] );
-	System.out.println( "Markup: \n\n" + markup );
+	// System.out.println( "Markup: \n\n" + markup );
 	String fullHtml = asciidoc.asciidocToHtml( markup );
 	System.out.print( "Output: " + fullHtml );
     }

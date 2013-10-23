@@ -1,0 +1,4 @@
+
+for x in `ls asciidocs`; do
+./run.sh $x
+done
