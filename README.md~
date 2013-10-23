@@ -1,6 +1,6 @@
 You need gradle installed.
 
-To build:
+To use:
 
     $ gradle build
 
