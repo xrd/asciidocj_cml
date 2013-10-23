@@ -8,3 +8,7 @@ To run:
 
     $ ./run.sh <path-to-asciidoc-file>
 
+Or:
+
+    $ ./run-all.sh
+
