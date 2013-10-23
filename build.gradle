@@ -1,0 +1,13 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+    }
+}
+
+apply plugin: 'java'
+
+dependencies {
+    compile fileTree(dir: 'lib', include: '*.jar')
+}

@@ -1,0 +1,9 @@
+import org.asciidocj.*;
+
+class Render {
+    public static void main( String args[] ) {
+	AsciiDocProcessor asciidoc = new AsciiDocProcessor();
+	//Asciidoctor.Factory.create();
+	//fullHtml = asciidoc.asciidocToHtml( markup);
+    }
+}
