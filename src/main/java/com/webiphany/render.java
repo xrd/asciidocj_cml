@@ -1,26 +1,15 @@
-import org.asciidocj.*;
+//import org.asciidocj.*;
+import static org.asciidoctor.Asciidoctor.Factory.create;
+import org.asciidoctor.Asciidoctor;
 import java.util.*;
 import java.io.*;
 
 class Render {
     public static void main( String[] args ) {
-	AsciiDocProcessor asciidoc = new AsciiDocProcessor();
-	String markup = readFile( args[ 0 ] );
-	// System.out.println( "Markup: \n\n" + markup );
-	String fullHtml = asciidoc.asciidocToHtml( markup );
+	Asciidoctor asciidoctor = create();
+	String markup = readFile( args[0] );
+	String fullHtml = asciidoctor.render( markup, Collections.EMPTY_MAP);
 	System.out.print( "Output: " + fullHtml );
-    }
-
-    private static String getFileViaScanner( String filename ) {
-	Scanner in = null;
-	try {
-	    in = new Scanner(new FileReader( filename ) );
-	}
-	catch ( IOException ioe ) {
-	    System.err.println( "Unable to read file: " + filename );
-	}
-	String markup = in.toString();
-	return markup;
     }
 
     private static String readFile( String filename ) {
@@ -31,7 +20,7 @@ class Render {
 		try {
 		    StringBuilder sb = new StringBuilder();
 		    String line = br.readLine();
-		    
+                   
 		    while (line != null) {
 			sb.append(line);
 			sb.append('\n');
